@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import App from './App'
-import Projects from './components/Projects/Project'
+import Projects from './components/Projects/Projects'
 
 function Routes() {
     return(

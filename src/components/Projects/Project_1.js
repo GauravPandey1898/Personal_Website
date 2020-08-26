@@ -4,8 +4,8 @@ import { TweenLite, Power3 } from "gsap";
 import leftArrow from '../assets/left.svg'
 import rightArrow from '../assets/right.svg'
 
-
-import './Project.scss'
+// import './normalize.css'
+// import './Project.scss'
 
 const testimonial = [
     {
@@ -67,8 +67,29 @@ function Project() {
                             <li>
                                 <div className="content-inner">
                                     <p className="info">{testimonial[0].info}</p>
-                                    <h3 className="title">{testimonial[0].title}</h3>
+                                    <h3 className="title-1">{testimonial[0].title}</h3>
                                     <h4 className="technology">{testimonial[0].technology}</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="content-inner">
+                                    <p className="info">{testimonial[1].info}</p>
+                                    <h3 className="title-1">{testimonial[1].title}</h3>
+                                    <h4 className="technology">{testimonial[1].technology}</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="content-inner">
+                                    <p className="info">{testimonial[2].info}</p>
+                                    <h3 className="title-1">{testimonial[2].title}</h3>
+                                    <h4 className="technology">{testimonial[2].technology}</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="content-inner">
+                                    <p className="info">{testimonial[3].info}</p>
+                                    <h3 className="title-1">{testimonial[3].title}</h3>
+                                    <h4 className="technology">{testimonial[3].technology}</h4>
                                 </div>
                             </li>
                         </ul>
