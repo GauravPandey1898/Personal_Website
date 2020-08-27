@@ -47,6 +47,27 @@ function Project() {
         isActive4: false,
     });
 
+    const [leftDisable, setLeftDisable] = useState(false)
+    const [rightDisable, setRightDisable] = useState(false)
+
+    //disabling arrow key for 1 sec 
+
+    const leftArrowDisable = () => {
+        setLeftDisable(!leftDisable);
+        setTimeout(() => {
+            setLeftDisable(false)
+        },1200)
+    }
+
+    const rightArrowDisable = () => {
+        setRightDisable(!rightDisable);
+        setTimeout(() => {
+            setRightDisable(false)
+        },1200)
+
+    }
+
+
     useEffect(() => {
         TweenLite.to(testimonialList.children[0], 0, {
             opacity: 1
@@ -70,7 +91,7 @@ function Project() {
 
     const scale = (index, duration) => {
         TweenLite.from(imageList.children[index], duration, {
-            scale: 1.2,
+            scale: 1.4,
             ease: Power3.easeOut
         });
     };
@@ -92,6 +113,7 @@ function Project() {
 
     const nextSlide = () => {
         if (imageList.children[0].classList.contains("active")) {
+            rightArrowDisable();
             setState({ isActive1: false, isActive2: true });
             //Image transition
             slideLeft(0,1);
@@ -104,6 +126,7 @@ function Project() {
             fadeOut(0, 1);
             fadeIn(1, 1);
         } else if (imageList.children[1].classList.contains("active")) {
+            rightArrowDisable();
             setState({ isActive2: false, isActive3: true });
             //Image transition
             slideLeft(1,1,2);
@@ -115,6 +138,7 @@ function Project() {
             fadeOut(1, 1);
             fadeIn(2, 1);
         }else if (imageList.children[2].classList.contains("active")) {
+            rightArrowDisable();
             setState({ isActive3: false, isActive4: true });
             //Image transition
             slideLeft(3,1,3);
@@ -130,6 +154,7 @@ function Project() {
             fadeIn(3, 1);
         } 
         else if (imageList.children[3].classList.contains("active")) {
+            rightArrowDisable();
             setState({ isActive1: true, isActive4: false });
             //Image transition
             slideLeft(0,1,0)
@@ -145,6 +170,7 @@ function Project() {
 
     const prevSlide = () => {
         if (imageList.children[0].classList.contains("active")) {
+            leftArrowDisable();
             setState({ isActive1: false, isActive4: true });
             //Image transition
             slideLeft(3,0,4)
@@ -159,6 +185,7 @@ function Project() {
             fadeOut(0, 1);
             fadeIn(3, 1);
         } else if (imageList.children[1].classList.contains("active")) {
+            leftArrowDisable();
             setState({ isActive2: false, isActive1: true });
             //Image transition
             slideRight(0,1,0)
@@ -170,6 +197,7 @@ function Project() {
             fadeOut(1, 1);
             fadeIn(0, 1);
         } else if (imageList.children[2].classList.contains("active")) {
+            leftArrowDisable();
                 setState({ isActive3: false, isActive2: true });
                 //Image transition
                 slideLeft(1,1,1);
@@ -181,6 +209,7 @@ function Project() {
                 fadeOut(2, 1);
                 fadeIn(1, 1);
         } else if (imageList.children[3].classList.contains("active")) {
+            leftArrowDisable();
             setState({ isActive3: true, isActive4: false });
             slideLeft(3,1,2)
             scale(2,1);
@@ -197,11 +226,13 @@ function Project() {
     return (
         <div className="testimonial-section">
             <div className="testimonial-container">
-                <div onClick={prevSlide} className="arrows left">
+                
+                   <button onClick={prevSlide} disabled={leftDisable} className="arrows left" >
                     <span>
                         <img src={leftArrow} alt="left arrow" />
                     </span>
-                </div>
+                    </button>
+                
                 <div className="inner">
                     <div className="t-image">
                         <ul ref={el => (imageList = el)}>
@@ -252,9 +283,11 @@ function Project() {
                         </ul>
                     </div>
                 </div>
-                <div className="arrows right" onClick={nextSlide}>
+                
+                    <button className="arrows right" disabled={rightDisable} onClick={nextSlide}>
                     <img src={rightArrow} alt="right arrow" />
-                </div>
+                    </button> 
+                
             </div>
         </div>
     );

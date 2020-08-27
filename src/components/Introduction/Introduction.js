@@ -10,7 +10,7 @@ const Introduction = () => {
 
     const list = ['Hi! My Name is Gaurav Pandey.', 'I\'m a Front-end Developer.', 'I\'m a Back-end Developer.', 'So Basically I\'m a Full-Stack Developer.']
     useEffect(() =>{
-        console.log(terminal)
+        
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(
             terminal,
