@@ -1,51 +1,105 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
+import Introduction from './components/Introduction/Introduction'
+import Projects from './components/Projects/Projects'
+import Skills from './components/Skills/Skills'
+import Contact from './components/Contact/Contact'
+import gsap, { Power3 } from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
 
 import './App.css';
 
+
 function App() {
+  let slide = useRef(null)
+  gsap.registerPlugin(ScrollTrigger)
+  let third_page = useRef(null)
+  let second_page = useRef(null)
+  let flag = true
+
+  useEffect(() => {
+    gsap.to(
+      slide,
+      2,
+      {
+        scrollTrigger: {
+          trigger: slide,
+          toggleActions: "play reverse restart reverse",
+
+
+        },
+        top: '45%',
+        opacity: 1,
+        ease: Power3.easeOut,
+        delay: 1,
+      }
+    )
+
+    gsap.from(
+      second_page,
+      1,
+      {
+        scrollTrigger : {
+          trigger : second_page,
+          toggleActions : "play none none reverse",
+          start: "top 30%", 
+            
+        },
+        opacity : 0,
+        ease : Power3.easeIn,
+
+      }
+    )
+
+    gsap.from(third_page, 2, {
+      scrollTrigger: {
+        trigger: third_page,
+
+
+        toggleActions: "play none none reverse",
+        scrub: true,
+
+      },
+      top: '100%',
+      ease: Power3.easeOut,
+      autoAlpha: 0,
+    })
+  }, [flag])
+
   return (
+
     <main>
-
-
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div class="firefly"></div>
-      <div>
-        <p className="text_style">Coming Soon </p>
-      </div>
-      <footer class="site-footer">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
-              <a href="https://www.gauravpandey.me"> Gaurav Pandey</a>.
-            </p>
-            </div>
-
-            <div className="col-md-4 col-sm-6 col-xs-12">
-              <ul className="social-icons">
-                <li><a className="facebook" href="https://www.facebook.com/devil1898"><i className="fa fa-facebook"></i></a></li>
-                <li><a className="instagram" href="https://www.instagram.com/12_mp_life/"><i className="fa fa-instagram"></i></a></li>
-                <li><a className="github" href="https://github.com/GauravPandey1898"><i className="fa fa-github"></i></a></li>
-                <li><a className="linkedin" href="https://www.linkedin.com/in/gaurav-pandey-111b56150"><i className="fa fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
+      <div className="header-class">
+        <Header />
+        <div className="first">
+          <Introduction />
+          <p
+            ref={el => { slide = el }}
+            className="slide-style">Slide Up</p>
         </div>
-      </footer>
+      </div>
+
+      <div className="second" ref={ el => (second_page = el)}>
+        <Skills />
+      </div>
+      <div className="third" ref={el => { third_page = el }}>
+        <h3 className="title-2">Projects</h3>
+        <Projects />
+
+      </div>
+      {/* <div className="fourth ">
+        <p className="p-style" style={{ color: "white" }}>Fourth</p>
+      </div> */}
+
+      <div className="contact-form">
+        <Contact />
+      </div>
+
+      <Footer />
+
+
     </main>
   );
 }
