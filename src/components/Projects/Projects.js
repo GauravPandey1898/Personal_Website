@@ -38,7 +38,10 @@ const testimonials = [
 function Project() {
     let imageList = useRef(null);
     let testimonialList = useRef(null);
-    const imageWidth = 340;
+    // const imageWidth = window.screen.availWidth > 1100 ? 500: 240;
+    // console.log(imageWidth)
+
+    let [imageWidth , setImageWidth] = useState(0)
 
     const [state, setState] = useState({
         isActive1: true,
@@ -72,6 +75,13 @@ function Project() {
         TweenLite.to(testimonialList.children[0], 0, {
             opacity: 1
         });
+        if(window.screen.availWidth > 1100 )
+        {
+            setImageWidth(340)
+        }
+        else{
+            setImageWidth(240)
+        }
     }, []);
 
     //Image transition
