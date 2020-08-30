@@ -31,7 +31,7 @@ body {
 }
 .second{
   background: rgba(255, 255, 255,0.8);
-  height: 100vh;
+  height: auto;
   scroll-snap-align: center;
   
 }
@@ -40,7 +40,7 @@ body {
   height: auto;
   overflow: hidden;
   scroll-snap-align: center;
-  visibility: visible;
+  opacity: 0;
 }
 .fourth{
   background: rgba(0, 0, 0, 0.5);

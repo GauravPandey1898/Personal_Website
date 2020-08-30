@@ -107,24 +107,13 @@ body{
               .content-inner {
                 
                 .info {
-                  font-size: 20px;
-                  letter-spacing: 0.88px;
-                  line-height: 30px;
-                  font-weight: 500;
-                  margin-bottom: 16px;
+                  
                 }
                 .technology {
-                  font-size: 18px;
-                  letter-spacing: 0.88px;
-                  line-height: 28px;
-                  color: $secondary;
-                  font-weight: 600;
+                  
                 }
                 .title-1 {
-                  font-size: 38px;
-                  letter-spacing: 0.88px;
-                  line-height: 35px;
-                  color: $secondary;
+                 
                 }
               }
             }
@@ -161,6 +150,26 @@ body{
               height: 400px;
               .content-inner{
                 width: 500px; 
+                .info{
+                  font-size: 20px;
+                  letter-spacing: 0.88px;
+                  line-height: 30px;
+                  font-weight: 500;
+                  margin-bottom: 16px;
+                }
+                .technology{
+                  font-size: 18px;
+                  letter-spacing: 0.88px;
+                  line-height: 28px;
+                  color: $secondary;
+                  font-weight: 600;
+                }
+                .title-1{
+                  font-size: 38px;
+                  letter-spacing: 0.88px;
+                  line-height: 35px;
+                  color: $secondary;
+                }
               }
               }
           }
@@ -210,10 +219,24 @@ body{
                 .content-inner{
                     width: 350px;
                     .info{
-
-                        .technology{
-                            .title-1{
-
+                      font-size: 16px;
+                  letter-spacing: 0.88px;
+                  line-height: 30px;
+                  font-weight: 500;
+                  margin-bottom: 16px;
+                    }
+                    .technology{
+                      font-size: 14px;
+                      letter-spacing: 0.88px;
+                      line-height: 28px;
+                      color: $secondary;
+                      font-weight: 600;
+                        }
+                    .title-1{
+                        font-size: 30px;
+                        letter-spacing: 0.88px;
+                        line-height: 35px;
+                        color: $secondary;
                             }
                         }
                     }
@@ -223,5 +246,3 @@ body{
     }
 }
     
-  }
-}
