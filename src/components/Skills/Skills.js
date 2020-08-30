@@ -20,39 +20,39 @@ function Skills () {
         
         
         tl.to(title,
-            0.5,
+            1,
             {   
                 opacity : 1,
                 ease : Power3.easeIn,
-                delay: 0.1,
+                delay: 0.3,
             })
         tl.to(language,
-            0.5,
+            1,
             {   
                 opacity:1,
                 ease : Power3.easeIn,
-                delay : 0.1,
+                delay : 0.3,
         })
         tl.to(database,
-            0.5,
+            1,
             {   
                 opacity : 1,
                 ease : Power3.easeIn,
-                delay : 0.1, 
+                delay : 0.3, 
             })
         tl.to(tools,
-            0.5,
+            1,
             {   
                 opacity : 1,
                 ease : Power3.easeIn,
-                delay : 0.1,
+                delay : 0.3,
             })
         tl.to(universal_skills,
-            0.5,
+            1,
             {   
                 opacity : 1,
                 ease : Power3.easeIn,
-                delay : 0.1,
+                delay : 0.3,
             })
     }
 

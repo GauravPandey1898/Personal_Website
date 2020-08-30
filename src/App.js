@@ -20,18 +20,13 @@ function App() {
   let flag = true
 
   useEffect(() => {
-    gsap.to(
+    gsap.from(
       slide,
-      2,
+      1,
       {
-        scrollTrigger: {
-          trigger: slide,
-          toggleActions: "play reverse restart reverse",
-
-
-        },
-        top: '45%',
-        opacity: 1,
+        
+        top: '50%',
+        opacity: 0,
         ease: Power3.easeOut,
         delay: 1,
       }
@@ -43,8 +38,8 @@ function App() {
       {
         scrollTrigger : {
           trigger : second_page,
-          toggleActions : "play none none reverse",
-          start: "top 30%", 
+          toggleActions : "play none none none",
+          start: "top 1%", 
             
         },
         opacity : 0,
@@ -53,18 +48,18 @@ function App() {
       }
     )
 
-    gsap.from(third_page, 2, {
+    gsap.to(third_page, 1, {
       scrollTrigger: {
         trigger: third_page,
 
 
-        toggleActions: "play none none reverse",
-        scrub: true,
+        toggleActions: "play none reverse none",
+        scrub:true,
 
       },
       top: '100%',
       ease: Power3.easeOut,
-      autoAlpha: 0,
+      opacity: 1,
     })
   }, [flag])
 
@@ -85,7 +80,7 @@ function App() {
         <Skills />
       </div>
       <div className="third" ref={el => { third_page = el }}>
-        <h3 className="title-2">Projects</h3>
+        <h3 className="title-2">Featured Projects</h3>
         <Projects />
 
       </div>
