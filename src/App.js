@@ -24,7 +24,6 @@ function App() {
       slide,
       1,
       {
-        
         top: '50%',
         opacity: 0,
         ease: Power3.easeOut,
@@ -34,13 +33,11 @@ function App() {
 
     gsap.from(
       second_page,
-      1,
+      0.5,
       {
         scrollTrigger : {
           trigger : second_page,
           toggleActions : "play none none none",
-          start: "top 1%", 
-            
         },
         opacity : 0,
         ease : Power3.easeIn,
@@ -48,17 +45,13 @@ function App() {
       }
     )
 
-    gsap.to(third_page, 1, {
+    gsap.to(third_page, 0.5, {
       scrollTrigger: {
         trigger: third_page,
-
-
         toggleActions: "play none reverse none",
-        scrub:true,
-
       },
-      top: '100%',
-      ease: Power3.easeOut,
+      
+      ease: Power3.easeIn,
       opacity: 1,
     })
   }, [flag])
