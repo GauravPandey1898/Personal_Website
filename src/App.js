@@ -48,7 +48,7 @@ function App() {
     gsap.to(third_page, 0.5, {
       scrollTrigger: {
         trigger: third_page,
-        toggleActions: "play none reverse none",
+        toggleActions: "play none none none",
       },
       
       ease: Power3.easeIn,
