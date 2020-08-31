@@ -35,29 +35,27 @@ function App() {
       second_page,
       0.5,
       {
-        scrollTrigger : {
-          trigger : second_page,
-          toggleActions : "play none none none",
+        scrollTrigger: {
+          trigger: second_page,
+          toggleActions: "play none none none",
         },
-        opacity : 0,
-        ease : Power3.easeIn,
+        opacity: 0,
+        ease: Power3.easeIn,
 
       }
     )
-
     gsap.to(third_page, 0.5, {
       scrollTrigger: {
         trigger: third_page,
         toggleActions: "play none none none",
       },
-      
+
       ease: Power3.easeIn,
       opacity: 1,
     })
   }, [flag])
 
   return (
-
     <main>
       <div className="header-class">
         <Header />
@@ -68,26 +66,20 @@ function App() {
             className="slide-style">Slide Up</p>
         </div>
       </div>
-
-      <div className="second" ref={ el => (second_page = el)}>
+      <div className="second" ref={el => (second_page = el)}>
         <Skills />
       </div>
       <div className="third" ref={el => { third_page = el }}>
         <h3 className="title-2">Featured Projects</h3>
         <Projects />
-
       </div>
       {/* <div className="fourth ">
         <p className="p-style" style={{ color: "white" }}>Fourth</p>
       </div> */}
-
       <div className="contact-form">
         <Contact />
       </div>
-
       <Footer />
-
-
     </main>
   );
 }

@@ -11,6 +11,7 @@ const testimonials = [
     {
         title: "Breaking Saul Fan App",
         image: `${require("../assets/breakingsaul.png")}`,
+        link: "https://breakingsaul.gauravpandey.me",
         technology: "ReactJs Axios Css3/HTML5",
         info:
             "Fan Made Web App for two series 1. Breaking Bad 2. Better Call Saul. This app let's you see the character info, famous quotes and much more."
@@ -18,19 +19,22 @@ const testimonials = [
     {
         title: "Chat Room",
         image: `${require("../assets/chatapp.png")}`,
+        link: "https://chatapp.gauravpandey.me",
         technology: "ReactJs Express NodeJs Socket.io",
         info: "Chat Room Application which let's user create or join a chat-room and interact with random people on that chat-room. It also support Emoji."
     },
     {
         title: "Firebase Auth Application Demo",
         image: `${require("../assets/reactfirebase.png")}`,
+        link: "https://github.com/GauravPandey1898/react-firebase-auth",
         technology: "ReactJs Firebase Firestore Material-ui",
         info: "Demo Web app to show the integration of Firebase-Auth for React projects."
     },
     {
         title: "Image Classification Web App",
         image: `${require("../assets/classification.png")}`,
-        technology: "Django OpenCV Postgresql",
+        link: "https://if-this-run.herokuapp.com",
+        technology: "Django OpenCV Postgresql Bootstrap",
         info: "Web App to store user uploaded image into seperate folders based on the persons face."
     },
 ]
@@ -41,7 +45,7 @@ function Project() {
     // const imageWidth = window.screen.availWidth > 1100 ? 500: 240;
     // console.log(imageWidth)
 
-    let [imageWidth , setImageWidth] = useState(0)
+    let [imageWidth, setImageWidth] = useState(0)
 
     const [state, setState] = useState({
         isActive1: true,
@@ -59,14 +63,14 @@ function Project() {
         setLeftDisable(!leftDisable);
         setTimeout(() => {
             setLeftDisable(false)
-        },1200)
+        }, 1200)
     }
 
     const rightArrowDisable = () => {
         setRightDisable(!rightDisable);
         setTimeout(() => {
             setRightDisable(false)
-        },1200)
+        }, 1200)
 
     }
 
@@ -75,11 +79,10 @@ function Project() {
         TweenLite.to(testimonialList.children[0], 0, {
             opacity: 1
         });
-        if(window.screen.availWidth > 1100 )
-        {
+        if (window.screen.availWidth > 1100) {
             setImageWidth(340)
         }
-        else{
+        else {
             setImageWidth(240)
         }
     }, []);
@@ -126,12 +129,11 @@ function Project() {
             rightArrowDisable();
             setState({ isActive1: false, isActive2: true });
             //Image transition
-            slideLeft(0,1);
-            scale(1,1);
-            slideLeft(1,1);
-            slideLeft(2,0);
-            slideLeft(3,0);
-
+            slideLeft(0, 1);
+            scale(1, 1);
+            slideLeft(1, 1);
+            slideLeft(2, 0);
+            slideLeft(3, 0);
             //content transition
             fadeOut(0, 1);
             fadeIn(1, 1);
@@ -139,39 +141,36 @@ function Project() {
             rightArrowDisable();
             setState({ isActive2: false, isActive3: true });
             //Image transition
-            slideLeft(1,1,2);
-            slideLeft(2,1,2);
-            scale(2,1);
-            slideLeft(3,0,2);
-            slideRight(0,0,3);
+            slideLeft(1, 1, 2);
+            slideLeft(2, 1, 2);
+            scale(2, 1);
+            slideLeft(3, 0, 2);
+            slideRight(0, 0, 3);
             //content transition
             fadeOut(1, 1);
             fadeIn(2, 1);
-        }else if (imageList.children[2].classList.contains("active")) {
+        } else if (imageList.children[2].classList.contains("active")) {
             rightArrowDisable();
             setState({ isActive3: false, isActive4: true });
             //Image transition
-            slideLeft(3,1,3);
-            
-            scale(3,1);
-            slideLeft(2,1,3)
-            
-            slideRight(1,0,1);
-            slideRight(0,0,1);
-            
+            slideLeft(3, 1, 3);
+            scale(3, 1);
+            slideLeft(2, 1, 3)
+            slideRight(1, 0, 1);
+            slideRight(0, 0, 1);
             //content transition
             fadeOut(2, 1);
             fadeIn(3, 1);
-        } 
+        }
         else if (imageList.children[3].classList.contains("active")) {
             rightArrowDisable();
             setState({ isActive1: true, isActive4: false });
             //Image transition
-            slideLeft(0,1,0)
-            slideRight(1,0,0)
-            scale(0,1);
-            slideLeft(2,0,0)
-            slideLeft(3,1,4)
+            slideLeft(0, 1, 0)
+            slideRight(1, 0, 0)
+            scale(0, 1);
+            slideLeft(2, 0, 0)
+            slideLeft(3, 1, 4)
             //content transition
             fadeOut(3, 1);
             fadeIn(0, 1);
@@ -183,14 +182,12 @@ function Project() {
             leftArrowDisable();
             setState({ isActive1: false, isActive4: true });
             //Image transition
-            slideLeft(3,0,4)
-            slideLeft(3,1,3)
-            scale(3,1)
-            slideRight(0,1,1)
-            
-            slideRight(1,0,1)
-            slideLeft(2,0,3)
-            
+            slideLeft(3, 0, 4)
+            slideLeft(3, 1, 3)
+            scale(3, 1)
+            slideRight(0, 1, 1)
+            slideRight(1, 0, 1)
+            slideLeft(2, 0, 3)
             //content transtion
             fadeOut(0, 1);
             fadeIn(3, 1);
@@ -198,35 +195,33 @@ function Project() {
             leftArrowDisable();
             setState({ isActive2: false, isActive1: true });
             //Image transition
-            slideRight(0,1,0)
-            scale(0,1)
-            slideRight(1,1,0)
-            slideRight(2,0,0)
-            slideRight(3,0,0)
+            slideRight(0, 1, 0)
+            scale(0, 1)
+            slideRight(1, 1, 0)
+            slideRight(2, 0, 0)
+            slideRight(3, 0, 0)
             //content transtion
             fadeOut(1, 1);
             fadeIn(0, 1);
         } else if (imageList.children[2].classList.contains("active")) {
             leftArrowDisable();
-                setState({ isActive3: false, isActive2: true });
-                //Image transition
-                slideLeft(1,1,1);
-                slideLeft(0,0,1);
-                scale(1,1)
-                slideLeft(2,1,1);
-                
-                //content transtion
-                fadeOut(2, 1);
-                fadeIn(1, 1);
+            setState({ isActive3: false, isActive2: true });
+            //Image transition
+            slideLeft(1, 1, 1);
+            slideLeft(0, 0, 1);
+            scale(1, 1)
+            slideLeft(2, 1, 1);
+            //content transtion
+            fadeOut(2, 1);
+            fadeIn(1, 1);
         } else if (imageList.children[3].classList.contains("active")) {
             leftArrowDisable();
             setState({ isActive3: true, isActive4: false });
-            slideLeft(3,1,2)
-            scale(2,1);
-            slideLeft(2,1,2)
-            slideLeft(1,0,2)
-            slideRight(0,0,2)
-
+            slideLeft(3, 1, 2)
+            scale(2, 1);
+            slideLeft(2, 1, 2)
+            slideLeft(1, 0, 2)
+            slideRight(0, 0, 2)
             //content transtion
             fadeOut(3, 1);
             fadeIn(2, 1);
@@ -236,27 +231,35 @@ function Project() {
     return (
         <div className="testimonial-section">
             <div className="testimonial-container">
-                
-                   <button onClick={prevSlide} disabled={leftDisable} className="arrows left" >
+
+                <button onClick={prevSlide} disabled={leftDisable} className="arrows left" >
                     <span>
                         <img src={leftArrow} alt="left arrow" />
                     </span>
-                    </button>
-                
+                </button>
+
                 <div className="inner">
                     <div className="t-image">
                         <ul ref={el => (imageList = el)}>
-                            <li className={state.isActive1 ? "active" : ""}>
-                                <img src={testimonials[0].image} alt={testimonials[0].name} />
+                            <li className={state.isActive1 ? "active" : ""} >
+                                <a href={testimonials[0].link}>
+                                    <img src={testimonials[0].image} alt={testimonials[0].name} />
+                                </a>
                             </li>
                             <li className={state.isActive2 ? "active" : ""}>
-                                <img src={testimonials[1].image} alt={testimonials[1].name} />
+                                <a href={testimonials[1].link}>
+                                    <img src={testimonials[1].image} alt={testimonials[1].name} />
+                                </a>
                             </li>
                             <li className={state.isActive3 ? "active" : ""}>
-                                <img src={testimonials[2].image} alt={testimonials[2].name} />
+                                <a href={testimonials[2].link}>
+                                    <img src={testimonials[2].image} alt={testimonials[2].name} />
+                                </a>
                             </li>
                             <li className={state.isActive4 ? "active" : ""}>
-                                <img src={testimonials[3].image} alt={testimonials[3].name} />
+                                <a href={testimonials[3].link}>
+                                    <img src={testimonials[3].image} alt={testimonials[3].name} />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -293,11 +296,11 @@ function Project() {
                         </ul>
                     </div>
                 </div>
-                
-                    <button className="arrows right" disabled={rightDisable} onClick={nextSlide}>
+
+                <button className="arrows right" disabled={rightDisable} onClick={nextSlide}>
                     <img src={rightArrow} alt="right arrow" />
-                    </button> 
-                
+                </button>
+
             </div>
         </div>
     );
