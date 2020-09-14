@@ -53,6 +53,18 @@ body {
   height: auto;
 }
 
+.site-footer
+{ 
+  position: relative;
+  width:100%;
+  background-color:rgba(31, 28, 28, 0.5);
+  padding:35px 0 35px;
+  font-size:15px;
+  line-height:34px;
+  color:#737373;
+  
+}
+
 .p-style{
   color: rgb(12, 7, 1);
   text-align: center;

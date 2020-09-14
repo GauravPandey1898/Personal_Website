@@ -79,7 +79,10 @@ function App() {
       <div className="contact-form">
         <Contact />
       </div>
-      <Footer />
+      <footer className="site-footer">
+        <Footer />
+      </footer>
+      
     </main>
   );
 }
