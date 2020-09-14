@@ -76,7 +76,7 @@ function Skills () {
         
         <div className="skill-content" >
             <div className="skill-title" ref={el => ( title = el)}>
-                <h3>Skills</h3>
+                <h4>Skills</h4>
             </div>
             <div className="skill-inner">
                 <div className="languages" ref={el => ( language = el)}>
