@@ -35,9 +35,9 @@ const Introduction = () => {
          ref={el => {terminal = el}}
          className="terminal">
             <div className="terminal-title">
-                <div className="red button"></div>
-                <div className="yellow button"> </div>
-                <div className="green button"></div>
+                <div className="red buttonkey"></div>
+                <div className="yellow buttonkey"> </div>
+                <div className="green buttonkey"></div>
                 <div className="title">
                     Introduction
                 </div>

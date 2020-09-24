@@ -48,10 +48,15 @@ body{
         &.left{
           left:1;
           z-index: 1;
+          
         }
         &.right {
           right: 0;
           z-index: 1;
+          
+        }
+        .arrow_sign{
+          filter: brightness(100);
         }
       }
       .inner {
@@ -76,7 +81,7 @@ body{
             overflow: hidden;
             height: 90%;
             width: 25%;
-            box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
+            box-shadow: 0px 0px 40px rgba(94, 94, 94, 0.253);
             li {
               
               img {
@@ -107,13 +112,13 @@ body{
               .content-inner {
                 
                 .info {
-                  
+                  color: rgba(241, 239, 239, 0.774);
                 }
                 .technology {
-                  
+                  color: #f2f2f6;
                 }
                 .title-1 {
-                 
+                  color: #f2f2f6;
                 }
               }
             }

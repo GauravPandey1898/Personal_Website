@@ -8,7 +8,7 @@ body{
 .skill-content{
     height: 100vh;
     width: 100wh;
-    background:black;
+    background: rgba(0, 0, 0,0.5);
     position: relative;
     justify-content: center;
     align-items: center;
@@ -24,11 +24,12 @@ body{
         opacity: 0;
         z-index: 3;
         
-        h3{
+        h4{
             font-family: 'Rajdhani', sans-serif;
-        text-shadow: 1px 1px rgba(255, 255, 255, 0.699);   
-        letter-spacing: 0.88px;
-        box-shadow: 0 0 40px rgba(0,0,0,0.55);
+            font-weight: 550;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.5);   
+            letter-spacing: 0.88px;
+        // box-shadow: 0 0 40px rgba(0,0,0,0.55);
         }
 
     }
@@ -37,10 +38,10 @@ body{
         flex-flow: row wrap;
         margin:0;
         padding:0;
-        background:white;
+        background:rgba(8, 8, 8, 0.904);
         position: relative;
         z-index: 2;
-        box-shadow: 0 0 40px rgba(255, 255, 255, 0.493);
+        box-shadow: 0 0 40px rgba(61, 240, 115, 0.767);
         
         
         justify-content: center;
@@ -50,14 +51,14 @@ body{
         
         
         .skill-heading{
-            color: rgb(255, 200, 21);
+            color: #20C20E;
             
             font-weight: 400;
             text-shadow: 1px 1px rgba(255, 200, 21, 0.25);
 
         }
         ul{
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             font-family: 'Rajdhani', sans-serif;
                 
                 font-weight: 400;
@@ -120,8 +121,8 @@ body{
 @media screen and (min-width: 800px){
     .skill-title{
         top : 8%;
-        h3{
-            font-size: 500%;
+        h4{
+            font-size: 4em;
             font-weight: 500;
         }
     }
@@ -143,8 +144,8 @@ body{
 @media screen and (max-width: 800px){
     .skill-title{
         top : 2%;
-        h3{
-            font-size: 45px;
+        h4{
+            font-size: 3em;
         }
     }
     .skill-inner{
