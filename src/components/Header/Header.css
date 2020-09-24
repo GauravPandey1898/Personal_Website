@@ -77,3 +77,5 @@
     background-color: rgba(31, 255, 1, 0.5);
     border-color:#123023;
 }
+
+@media screen and (min-width: 1101px)

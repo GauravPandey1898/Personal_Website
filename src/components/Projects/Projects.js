@@ -234,7 +234,7 @@ function Project() {
 
                 <button onClick={prevSlide} disabled={leftDisable} className="arrows left" >
                     <span>
-                        <img src={leftArrow} alt="left arrow" />
+                        <img src={leftArrow} alt="left arrow" className="arrow_sign"/>
                     </span>
                 </button>
 
@@ -298,7 +298,7 @@ function Project() {
                 </div>
 
                 <button className="arrows right" disabled={rightDisable} onClick={nextSlide}>
-                    <img src={rightArrow} alt="right arrow" />
+                    <img src={rightArrow} alt="right arrow" className="arrow_sign" />
                 </button>
 
             </div>
