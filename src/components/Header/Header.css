@@ -78,4 +78,13 @@
     border-color:#123023;
 }
 
-@media screen and (min-width: 1101px)
+@media screen and (max-width: 780px){
+    .button-left{
+        
+        transform: translate(0%,20%);
+    }
+    .button-right{
+        
+        transform: translate(0%,20%);
+    }
+}
