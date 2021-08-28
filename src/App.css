@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Carme&display=swap');
 
-html, body {
-  margin:0px;
-  height: 100vh;
-  overflow: scroll;
-  scroll-snap-type: y proximity;
-  overscroll-behavior: contain ;
-  
-}
 
-body {
+
+#root {
   /* background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg); */
   /* background: #64abfc; */
   background: url('../src/components/assets/wp5848964-macintosh-minimalist-4k-wallpapers.jpg');
@@ -17,6 +10,11 @@ body {
   background-clip: inherit;
   background-position: center;
   background-size: cover;
+  margin:0px;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  overscroll-behavior: contain ;
 }
 
 .header-class{
