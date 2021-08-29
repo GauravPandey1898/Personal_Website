@@ -76,7 +76,7 @@ function Project() {
       document.documentElement.clientWidth || 0,
       window.innerWidth || 0
     );
-    if (vw > 1100) {
+    if (vw > 1600) {
       setImageWidth(340);
     } else {
       setImageWidth(240);
@@ -91,7 +91,7 @@ function Project() {
       document.documentElement.clientWidth || 0,
       window.innerWidth || 0
     );
-    if (vw > 1100) {
+    if (vw > 1600) {
       setImageWidth(340);
     } else {
       setImageWidth(240);
