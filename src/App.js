@@ -13,15 +13,14 @@ import './App.css';
 
 
 function App() {
-  let slide = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
-  let third_page = useRef(null)
-  let second_page = useRef(null)
-  let flag = true
+  const slide = useRef([])
+
+  let flag = true;
 
   useEffect(() => {
     gsap.from(
-      slide,
+      slide.current,
       1,
       {
         top: '50%',
@@ -31,28 +30,28 @@ function App() {
       }
     )
 
-    gsap.from(
-      second_page,
-      0.5,
-      {
-        scrollTrigger: {
-          trigger: second_page,
-          toggleActions: "play none none none",
-        },
-        opacity: 0,
-        ease: Power3.easeIn,
+    // gsap.from(
+    //   second_page,
+    //   0.5,
+    //   {
+    //     scrollTrigger: {
+    //       trigger: second_page,
+    //       toggleActions: "play none none none",
+    //     },
+    //     opacity: 0,
+    //     ease: Power3.easeIn,
 
-      }
-    )
-    gsap.to(third_page, 0.5, {
-      scrollTrigger: {
-        trigger: third_page,
-        toggleActions: "play none none none",
-      },
+    //   }
+    // )
+    // gsap.to(third_page, 0.5, {
+    //   scrollTrigger: {
+    //     trigger: third_page,
+    //     toggleActions: "play none none none",
+    //   },
 
-      ease: Power3.easeIn,
-      opacity: 1,
-    })
+    //   ease: Power3.easeIn,
+    //   opacity: 1,
+    // })
   }, [flag])
 
   return (
@@ -62,20 +61,17 @@ function App() {
         <div className="first">
           <Introduction />
           <p
-            ref={el => { slide = el }}
-            className="slide-style">Slide Up</p>
+            ref={el => { slide.current = el }}
+            className="slide-style">Scroll Up</p>
         </div>
       </div>
-      <div className="second" ref={el => (second_page = el)}>
+      <div className="second" >
         <Skills />
       </div>
-      <div className="third" ref={el => { third_page = el }}>
+      <div className="third" >
         <h3 className="title-2">Featured Projects</h3>
         <Projects />
       </div>
-      {/* <div className="fourth ">
-        <p className="p-style" style={{ color: "white" }}>Fourth</p>
-      </div> */}
       <div className="contact-form">
         <Contact />
       </div>

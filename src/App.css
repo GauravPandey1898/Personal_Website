@@ -41,7 +41,7 @@
   height: auto;
   overflow: hidden;
   scroll-snap-align: center;
-  opacity: 0;
+  opacity: 1;
 }
 .fourth{
   background: rgba(0, 0, 0, 0.5);

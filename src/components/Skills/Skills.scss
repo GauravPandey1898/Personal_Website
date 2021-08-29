@@ -37,13 +37,13 @@ body{
         display: flex;
         flex-flow: row wrap;
         margin:0;
-        padding:0;
+        padding: 50px;
         background: inherit;
         // background:rgba(0, 0, 0, 0.904);
         position: relative;
         z-index: 2;     
         justify-content: center;
-        overflow:scroll;
+        overflow:auto;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, .3);  
         backdrop-filter: blur(10px);

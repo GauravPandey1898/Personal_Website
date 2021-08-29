@@ -13,6 +13,9 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+
     &:after {
       content: "";
       position: inherit;
@@ -140,7 +143,7 @@ body{
         position: relative;
         width: 500px;
         height: 600px;
-        left: -10%;
+        left: -20%;
           ul{
             position: relative;
             width: 500px;
