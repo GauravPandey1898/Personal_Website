@@ -4,7 +4,17 @@ import file from '../assets/Gaurav_Pandey_Resume.pdf'
 
 const Header = () => {
     return(
-        <div className="header-style">
+        <header className="header-style">
+
+            <a 
+                href="https://blog.gauravpandey.me" 
+                target="_blank"
+                rel="nooopener noreferrer"
+                >
+                <button type="button" className="btn button-left">Blog</button>
+            </a>
+            <p className="text" style={{opacity:1 , }}>Gaurav Pandey</p>
+            
             <a 
                 href={file}
                 download = "Gaurav_Pandey_Resume.pdf"
@@ -13,18 +23,8 @@ const Header = () => {
                 >
                 <button type="button" className="btn button-right">Resume</button>
             </a>
-
-            <p className="text" style={{opacity:1 , }}>Gaurav Pandey</p>
             
-            <a 
-                href="https://blog.gauravpandey.me" 
-                target="_blank"
-                rel="nooopener noreferrer"
-                >
-                <button type="button" className="btn button-left">Blog</button>
-            </a>
-            
-        </div>
+        </header>
     )
 }
 
